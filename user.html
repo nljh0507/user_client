@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>반려견 출입 제한 시스템</title>
+		<link rel="stylesheet" href="./styles/user.css" />
+	</head>
+	<body>
+		<div id="header">
+			<div id="clock"></div>
+		</div>
+
+		<main id="camera">
+			<canvas id="camera--sensor"></canvas>
+			<video id="camera--view" autoplay playsinline></video>
+			<button id="camera--trigger">사진 촬영</button>
+		</main>
+
+		<div id="footer">
+			<p>반려견 출입 제한 시스템</p>
+		</div>
+
+		<script src="./scripts/user.js"></script>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Noto Sans KR", sans-serif;
+}
+
+#header {
+	position: fixed;
+	padding: 18px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	font-size: 15px;
+	z-index: 999;
+}
+
+#camera,
+#camera--view,
+#camera--sensor,
+#camera--output {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+#camera--view,
+#camera--sensor,
+#camera--output {
+	transform: scaleX(-1);
+	filter: FlipH;
+}
+
+#camera--trigger {
+	position: fixed;
+	width: 530px;
+	height: 150px;
+	color: white;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0, 0, 0, 0.8);
+	font-size: 32px;
+	border: none;
+	text-align: center;
+	outline: none;
+}
+
+/* pass, fail js로 구현*/
+#camera--trigger.pass {
+	background-color: rgba(102, 158, 64, 0.8);
+}
+
+#camera--trigger.fail_temperature,
+#camera--trigger.fail_muzzle {
+	background-color: rgba(255, 79, 79, 0.8);
+}
+
+#footer {
+	position: fixed;
+	padding: 18px;
+	width: 100%;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	font-size: 15px;
+	z-index: 999;
+}
